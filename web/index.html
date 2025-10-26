@@ -19,7 +19,7 @@
 <body>
   <div class="wrap">
     <h1>HireHub — Live Demo</h1>
-    <p class="small">API base: <code id="apiBase">(waiting...)</code></p>
+    <p class="small">API base: <code id="apiBase">https://hirehub-api-4xhc.onrender.com</code></p>
 
     <div class="card">
       <h3>Create Company</h3>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="card">
-      <h3>Luna — Chat (demo)</h3>
+      <h3>Luna — Chat (OpenAI)</h3>
       <div><input id="msg" placeholder="Напиши кратко резюме за опита си..."></div>
       <p><button class="btn" onclick="askLuna()">Ask Luna</button></p>
       <pre id="lunaOut" class="small"></pre>
@@ -59,7 +59,6 @@
 
   <script>
     const API = 'https://hirehub-api-4xhc.onrender.com';
-    document.getElementById('apiBase').textContent = API;
     async function createTenant(){
       const payload = {
         name: document.getElementById('name').value || 'CreativeCo',

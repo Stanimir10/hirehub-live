@@ -5,6 +5,14 @@ from app.api.v1.metrics import router as metrics_router
 from app.api.v1.luna import router as luna_router
 
 app = FastAPI(title="HireHub API — Live Demo", version="0.3.0")
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(tenants_router, prefix="/v1")
 app.include_router(metrics_router, prefix="/v1")

@@ -1,15 +1,6 @@
 from fastapi import APIRouter
-from typing import Dict
-
 router = APIRouter()
 
-STATE = {
-    "companies": 3,
-    "users": 12,
-    "ai_analyses": 19,
-    "mrr_bgn": 349
-}
-
-@router.get("/metrics", response_model=Dict[str,int])
+@router.get("/metrics")
 def metrics():
-    return STATE
+    return {"companies": 1, "users": 1, "ai_analyses": 42, "mrr_bgn": 0}

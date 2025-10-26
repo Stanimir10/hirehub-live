@@ -13,7 +13,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 app.include_router(tenants_router, prefix="/v1")
 app.include_router(metrics_router, prefix="/v1")
 app.include_router(luna_router, prefix="/v1")

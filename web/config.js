@@ -1,0 +1,1 @@
+window.HIREHUB_CONFIG = { API_BASE: 'https://hirehub-api-4xhc.onrender.com' };

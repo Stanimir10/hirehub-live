@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HireHub — Dashboard</title>
+<title>HireHub — Luna</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="styles.css">
@@ -39,19 +39,13 @@
         </div>
       </header>
       <section class="max-w-6xl mx-auto px-4 py-6">
-<div id="dashPage" class="space-y-6">
-  <div class="grid md:grid-cols-3 gap-4">
-    <div class="hh-card p-5"><div class="text-slate-500 text-sm">Companies</div><div class="text-3xl font-semibold">—</div><button onclick="loadMetrics()" class="mt-3 hh-btn">Refresh</button></div>
-    <div class="hh-card p-5"><div class="text-slate-500 text-sm">AI Analyses</div><div class="text-3xl font-semibold">—</div><div class="text-xs text-slate-500">via Luna</div></div>
-    <div class="hh-card p-5"><div class="text-slate-500 text-sm">MRR</div><div class="text-3xl font-semibold">—</div><div class="text-xs text-slate-500">BGN</div></div>
-  </div>
+<div id="lunaPage" class="max-w-2xl mx-auto">
   <div class="hh-card p-5">
-    <div class="flex items-center justify-between mb-3"><h3 class="font-semibold">Candidates overview</h3><a class="hh-link" href="candidates.html">View all →</a></div>
-    <div class="overflow-auto">
-      <table class="w-full hh-table"><thead><tr><th class="text-left">Name</th><th class="text-left">Role</th><th>Score</th><th class="text-left">Tags</th><th></th></tr></thead><tbody id="candTbody"></tbody></table>
-    </div>
+    <h2 class="text-xl font-semibold mb-2">Luna — AI Assistant</h2>
+    <input id="msg" class="hh-input" placeholder="Напиши кратко резюме за опита си...">
+    <div class="mt-3 flex gap-2"><button id="btnAskLuna" class="hh-btn">Ask Luna</button><a class="hh-link" href="candidates.html">← Back to candidates</a></div>
+    <pre id="lunaOut" class="text-xs text-slate-500 mt-3"></pre>
   </div>
-  <pre id="metricsOut" class="text-xs text-slate-500"></pre>
 </div>
 </section>
     </main>
